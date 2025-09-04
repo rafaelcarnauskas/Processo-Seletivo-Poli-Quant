@@ -1,0 +1,14 @@
+GUIA PARA EXECUÇÃO
+
+1) Executar o backtest.py é suficiente para executar todos os códigos envolvidos na geração dos resultados. A execução dura por volta de 40 segundos.
+2) É necessário que o diretório selecionado seja o da pasta dos códigos pois no envio essa não será a pasta principal e então pode dar problemas de referência para achar algum arquivo durante a execução
+3) Arquivos que começam o nome com "plot" são responsáveis por plotar alguns dos gráficos e tabelas que estão salvos nas imagens .png mas não todos
+4) backtest.py também plota alguns dos gráficos salvos
+5) A pasta rascunhos contém o rascunho dos principais códigos
+6) A pasta secundários contém arquivos sem efeito no programa principal, mas que em algum momento foram utilizados
+7) Para otimizar um pouco o programa principal, o sectors.py gera a tabela dos setores para cada ação e cria sectors.csv que é utilizado pelo escolhaDePares.py
+8) Análise final plota alguns dos gráficos utilizados na análise do relatório
+9) volatility_check.py contém o método responsável por comparar a volatilidade de uma ação com a volatilidade do IBOV e retornar o valor booleano a ser utilzado em escolhaDePares.py
+10) Há uma densidade enorma de comentários em escolhaDePares.py pois foi a parte mais complicada e a primeira parte feita, então o melhor foi deixar tudo bem documentado
+11) As bases de dados utilizadas são ibov_2010_2024.csv e precos_b3_202010-2024_adjclose
+12) As funções de STOP_LOSS e CLOSE_OPERATION em backtest.py fazem a mesma coisa agora, mas a ideia inicialmente era que a CLOSE_OPERATION mantivesse posição residual, porém observou-se que para esse modelo essa técnica não seria útil

@@ -1,0 +1,26 @@
+1- A tabela de ibov contém datas e os pontos de fechamento da bolsa naquele dia.
+    A quantidade de pontos é definida por uma média ponderada das principais ações e setores, mas para 
+    esse estudo, o importante é entender que a variação dos pontos indicam crescimento ou queda das 
+    principais ações da B3 de forma diretamente  proporcional.
+    É apenas uma unidade para acompanhar a evolução do índice ao longo do tempo, como um “termômetro” do mercado.
+    Usarei nesse estudo para comparar com os ganhos da minha estratégia. Por exemplo, se em um determinado
+    período o Ibovespa subiu 12% e minha carteira subiu 8%, quer dizer que a estratégia não foi tão eficaz
+    quanto o próprio indice. O contrário também vale e ele será uma das métricas de sucesso.
+    O Ibov não pode ser usado como controle de risco na estratégia de Pairs Trading pensando em quebra de relação
+    histórica, já que Pairs Trading evita se prender à direção do mercado, mas serve como controle de risco geral da carteira por indicar
+    uma queda geral dos valores.
+    Além, claro de indicar tendências no mercado.
+    Para verificar quais ativos tem mais correlação com o índice Ibovespa, é necessário analisar durante um
+    período determinado como caminham as ações e o índice (qualquer coisa veja com o chat).
+    Como usarei o Pairs Trading, não precisarei verificar a correlação dos ativos escolhidos com o ibov.
+    Em resumo, ibov aqui vai servir para comparar com os ganhos da minha estratégia, já que para o Pairs Trading,
+    não importa a direção do mercado todo, mas sim os spreads entre dois ativos.
+
+2- A tabela de preços B3 contém as datas e os valores uma unidade de ação de cada uma das empresas listadas na bolsa brasileira.
+    Esse valor deve ser arredondado para a segunda casa decimal (ex: valor 2,8393 custava R$ 2,84 naquele fechamento.)
+    Algumas colunas estão vazias durante determinados períodos, o que significa que, nesse período, aquela ação
+    não estava listada na bolsa.
+
+3- Uma série estacionária é toda série cujas propriedades estatísticas como média, variância ou covariância não variam com o tempo
+    Para que dois tickers sejam uma boa escolha como pares no Pairs Trading, devo garantir que eles estejam cointegrados, ou seja, a combinação linear
+    deles é uma série   estacionária.
